@@ -1,7 +1,6 @@
 # Time Complexity - O(n) | Space Complexity - O(1)
 class Solution:
     def minSteps(s: str, t: str) -> int:
-        
         def makeDict(st):
             dic = {}
             for c in st:
