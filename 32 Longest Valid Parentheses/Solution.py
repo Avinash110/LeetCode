@@ -1,4 +1,5 @@
 class Solution:
+	# Time Complexity - O(n) | Space Complexity - O(n)
     def longestValidParentheses(self, s: str) -> int:
         
         str_copy = list(s)
