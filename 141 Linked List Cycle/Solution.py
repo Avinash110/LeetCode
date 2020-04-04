@@ -30,8 +30,8 @@ class Solution:
         fast = head
         
         while fast.next and fast.next.next:
-            if slow == fast:
-                return True
             slow = slow.next
             fast = fast.next.next
+            if slow == fast:
+                return True
         return False
