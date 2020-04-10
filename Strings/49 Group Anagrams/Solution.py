@@ -1,15 +1,12 @@
 class Solution:
-	# Time complexity O(N*MlogM) | Space complexity O(NM)
+	# Time complexity O(N*MlogM) | Space complexity O(1)
     def groupAnagrams(self, strs):
         anagram = {}
         
-        sortedStrings = []
         for i, s in enumerate(strs):
-            sortedStrings.append("".join(sorted(s)))
-        
-        for i, s in enumerate(strs):
-            group = anagram.get(sortedStrings[i], [])
+            sortedString = "".join(sorted(s))
+            group = anagram.get(sortedString, [])
             group.append(s)
-            anagram[sortedStrings[i]] = group
+            anagram[sortedString] = group
         
         return list(anagram.values())
